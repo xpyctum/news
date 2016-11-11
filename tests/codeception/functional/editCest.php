@@ -34,7 +34,7 @@ class editCest
         $news = $I->grabFixture('news')->getModel('lorem_ipsum_dolor_sit_amet');
         $I->amOnPage(['news/admin/edit', 'id' => $this->controlNews->id]);
 
-        $I->submitForm('form', $this->formParams($news->slug, $news->title,$news->description));
+        $I->submitForm('form', $this->formParams($news->slug, $news->title, $news->description));
         $I->see('Slug "' . $news->slug . '" has already been taken.', '.help-block');
     }
 
