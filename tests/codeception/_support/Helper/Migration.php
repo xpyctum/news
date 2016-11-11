@@ -16,7 +16,7 @@ class Migration extends Module
      * The application configuration array may contain an optional `class` element which specifies the class
      * name of the application instance to be created. By default, a [[\yii\web\Application]] instance will be created.
      */
-    public $appConfig = __DIR__ . '/../../_config/unit.php';
+    public $appConfig = __DIR__ . '/../../_config/migration.php';
 
     /** @inheritdoc */
     public function _beforeSuite($settings = [])

@@ -25,13 +25,7 @@ return [
         'assetManager' => [
             'basePath' => __DIR__ . '/../assets',
         ],
-        'db' => [
-            'class' => 'yii\db\Connection',
-            'dsn' => 'sqlite::memory:',
-            'attributes' => [
-                PDO::ATTR_PERSISTENT => true
-            ]
-        ],
+        'db' => require('db.php'),
         'log' => null,
         'cache' => null,
         'request' => [

@@ -11,4 +11,3 @@ require_once(__DIR__ . '/../../vendor/yiisoft/yii2/Yii.php');
 
 Yii::setAlias('@tests', dirname(__DIR__));
 Yii::setAlias('@src', __DIR__ . '/../../src');
-Yii::setAlias('@webroot', __DIR__ . '/_app');
