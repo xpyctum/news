@@ -49,7 +49,7 @@ class News extends Object
         $items = [];
         $query = NewsModel::find();
 
-        if (!empty($where)){
+        if (!empty($where)) {
             $query->andFilterWhere($where);
         }
 
@@ -59,7 +59,7 @@ class News extends Object
             'pagination' => $pagination ?: []
         ]);
 
-        foreach($adp->getModels() as $model){
+        foreach ($adp->getModels() as $model) {
             $items[] = new NewsObject($model);
         }
 

@@ -7,7 +7,6 @@
 
 namespace roboapp\news;
 
-
 use roboapp\news\models\News;
 use yii\base\BootstrapInterface;
 use yii\i18n\PhpMessageSource;
