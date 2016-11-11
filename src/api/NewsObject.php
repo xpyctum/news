@@ -73,6 +73,14 @@ class NewsObject
     }
 
     /**
+     * @return bool
+     */
+    public function hasImage()
+    {
+        return (bool) $this->getModel()->getAttribute('image');
+    }
+
+    /**
      * @return int
      */
     public function getUpdatedTimeUTC()

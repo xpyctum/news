@@ -76,7 +76,7 @@ class News extends Object
     public static function last($pagination = null, $where = [])
     {
         $sort = new Sort([
-            'attributeOrders' => [
+            'defaultOrder' => [
                 'created_at' => SORT_DESC
             ]
         ]);

@@ -45,15 +45,25 @@ class ApiTest extends \Codeception\Test\Unit
 
     public function testAllNews()
     {
+        $allNews = News::all();
+
+        $this->assertEquals(2, count($allNews));
+    }
+
+    public function testAllNewsByCondition()
+    {
         /** @var $news \roboapp\news\models\News */
         $news = $this->tester->grabFixture('news')->getModel('lorem_ipsum_dolor_sit_amet');
 
-        $allNews = News::all();
         $allNewsByCondition = News::all(null, null, ['title' => $news->title]);
-        $allNewsByPagination = News::all(new Pagination(['page' => 2, 'pageSize' => 1]));
 
-        $this->assertEquals(2, count($allNews));
         $this->assertEquals(1, count($allNewsByCondition));
+    }
+
+    public function testAllNewsByPagination()
+    {
+        $allNewsByPagination = News::all(['page' => 1, 'pageSize' => 1]);
+
         $this->assertEquals('ut_enim_ad_minim_veniam', $allNewsByPagination[0]->getSlug());
     }
 
