@@ -8,6 +8,8 @@ namespace roboapp\news\api;
 
 use roboapp\news\models\News as NewsModel;
 use yii\base\Object;
+use yii\data\ActiveDataProvider;
+use yii\data\Sort;
 
 /**
  * Class News API
@@ -34,32 +36,70 @@ class News extends Object
     }
 
     /**
-     * Get page by slug
+     * Get all news
      *
+     * @param array|\yii\data\Pagination|null $pagination
+     * @param array|\yii\data\Sort|null $sort
+     * @param array $where
      * @return NewsObject[]
      * @internal param string $slug
      */
-    public static function all()
+    public static function all($pagination = null, $sort = null, $where = [])
     {
+        $items = [];
+        $query = NewsModel::find();
 
+        if (!empty($where)){
+            $query->andFilterWhere($where);
+        }
+
+        $adp = new ActiveDataProvider([
+            'query' => $query,
+            'sort' => $sort ?: [],
+            'pagination' => $pagination ?: []
+        ]);
+
+        foreach($adp->getModels() as $model){
+            $items[] = new NewsObject($model);
+        }
+
+        return $items;
     }
 
     /**
-     * Get page by slug
+     * Get last news
+     *
+     * @param array|\yii\data\Pagination|null $pagination
+     * @param array $where
+     * @return NewsObject[]
+     */
+    public static function last($pagination = null, $where = [])
+    {
+        $sort = new Sort([
+            'attributeOrders' => [
+                'created_at' => SORT_DESC
+            ]
+        ]);
+
+        return static::all($pagination, $sort, $where);
+    }
+
+    /**
+     * Get news by slug
      * @param $slug string
      * @return null|NewsObject
      */
     public static function get($slug)
     {
         if (!array_key_exists($slug, self::getInstance()->newsCache)) {
-            self::getInstance()->newsCache[$slug] = self::getInstance()->findPage($slug);
+            self::getInstance()->newsCache[$slug] = self::getInstance()->findNews($slug);
         }
 
         return self::getInstance()->newsCache[$slug];
     }
 
     /**
-     * Check existence the page by slug
+     * Check existence the news by slug
      * @param $slug string
      * @return bool
      */
@@ -72,15 +112,15 @@ class News extends Object
      * @param $slug string
      * @return null|NewsObject
      */
-    protected function findPage($slug)
+    protected function findNews($slug)
     {
         /**
          * @var $modelQuery \yii\db\ActiveQuery
-         * @var $page NewsModel
+         * @var $news NewsModel
          */
         $modelQuery = forward_static_call([\Yii::createObject(NewsModel::class), 'find']);
-        $page = $modelQuery->where(['slug' => $slug])->one();
+        $news = $modelQuery->where(['slug' => $slug])->one();
 
-        return $page ? new NewsObject($page) : null;
+        return $news ? new NewsObject($news) : null;
     }
 }
