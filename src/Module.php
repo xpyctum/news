@@ -63,7 +63,8 @@ class Module extends BaseModule
         parent::init();
 
         if (!array_key_exists('uploadUrl', $this->imageLoaderOptions)) {
-            throw new InvalidConfigException("The 'imageLoaderOptions' property must contain 'uploadUrl' property.", 500);
+            $message = "The 'imageLoaderOptions' property must contain 'uploadUrl' property.";
+            throw new InvalidConfigException($message, 500);
         }
 
         \Yii::$container->set(Redactor::class, $this->redactorOptions);
