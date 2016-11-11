@@ -1,0 +1,43 @@
+{
+    "name": "roboapp/news",
+    "description": "The structure news module for Yii-2 application.",
+    "type": "yii2-extension",
+    "keywords": [
+        "yii2",
+        "news",
+        "module",
+        "yii 2",
+        "roboapp"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "iRipVanWinkle",
+            "email": "iripvanwinkle@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "roboapp/crud": "~1.0",
+        "roboapp/fileloader": "~1.0",
+        "roboapp/redactor": "^0.1.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "~2.3",
+        "codeception/codeception": "~2.2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "roboapp\\news\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "roboapp\\news\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "cd tests && ../vendor/bin/codecept build && ../vendor/bin/codecept run && cd ..",
+        "test-coverage": "cd tests && ../vendor/bin/codecept build && ../vendor/bin/codecept run --coverage --coverage-xml && cd .."
+    }
+}

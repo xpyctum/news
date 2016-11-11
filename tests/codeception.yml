@@ -1,0 +1,21 @@
+namespace: tests\codeception
+actor: Tester
+coverage:
+    enabled: true
+    include:
+      - ../src/*
+    exclude:
+      - ../src/messages/*
+      - ../src/migrations/*
+paths:
+    tests: codeception
+    log: codeception/_output
+    data: codeception/_data
+    support: codeception/_support
+settings:
+    bootstrap: _bootstrap.php
+    colors: true
+    memory_limit: 1024M
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
