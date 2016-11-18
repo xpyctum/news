@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dbe7b583a95e1781574eebbbe79100b2",
-    "content-hash": "658a07707427eab0fdf9afdce4e0ff07",
+    "hash": "47a0f8642ad86311173305d897976ba9",
+    "content-hash": "1abd996867cefe909f337c07549205ed",
     "packages": [
         {
             "name": "bower-asset/jquery",
@@ -346,20 +346,25 @@
         },
         {
             "name": "roboapp/redactor",
-            "version": "v0.1",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roboapp/redactor.git",
-                "reference": "1a422a434331fe924f5fa6a0fcf0762f11885c3f"
+                "reference": "fd7745f53daad6981a70dce400ea603f177ac5e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roboapp/redactor/zipball/1a422a434331fe924f5fa6a0fcf0762f11885c3f",
-                "reference": "1a422a434331fe924f5fa6a0fcf0762f11885c3f",
+                "url": "https://api.github.com/repos/roboapp/redactor/zipball/fd7745f53daad6981a70dce400ea603f177ac5e9",
+                "reference": "fd7745f53daad6981a70dce400ea603f177ac5e9",
                 "shasum": ""
             },
             "require": {
                 "yiisoft/yii2": "~2.0.0"
+            },
+            "require-dev": {
+                "codeception/codeception": "~2.2.5",
+                "codeception/mockery-module": "*",
+                "squizlabs/php_codesniffer": "~2.3"
             },
             "type": "yii2-extension",
             "autoload": {
@@ -377,7 +382,7 @@
                     "email": "iripvanwinkle@gmail.com"
                 }
             ],
-            "description": "Imperavi Redactor Widget for Yii",
+            "description": "Imperavi Redactor Widget for Yii2",
             "keywords": [
                 "impravi",
                 "roboapp",
@@ -385,7 +390,7 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2016-09-29 11:18:46"
+            "time": "2016-11-16 18:00:53"
         },
         {
             "name": "yiisoft/yii2",
@@ -953,6 +958,47 @@
             "time": "2016-06-24 23:00:38"
         },
         {
+            "name": "iripvanwinkle/codeception-migration",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/iRipVanWinkle/codeception-migration.git",
+                "reference": "bd40e59726dfb4bd0f2019553512686ecb74edd4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/iRipVanWinkle/codeception-migration/zipball/bd40e59726dfb4bd0f2019553512686ecb74edd4",
+                "reference": "bd40e59726dfb4bd0f2019553512686ecb74edd4",
+                "shasum": ""
+            },
+            "require": {
+                "codeception/codeception": "~2.2.5"
+            },
+            "type": "extension",
+            "autoload": {
+                "psr-4": {
+                    "Codeception\\Extension\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "iRipVanWinkle",
+                    "email": "iripvanwinkle@gmail.com"
+                }
+            ],
+            "description": "The migration extension for Codeception with Yii2.",
+            "keywords": [
+                "codeception",
+                "extension",
+                "yii2"
+            ],
+            "time": "2016-11-17 22:56:15"
+        },
+        {
             "name": "myclabs/deep-copy",
             "version": "1.5.5",
             "source": {
@@ -1399,16 +1445,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "1.4.8",
+            "version": "1.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "3144ae21711fb6cac0b1ab4cbe63b75ce3d4e8da"
+                "reference": "3b402f65a4cc90abf6e1104e388b896ce209631b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/3144ae21711fb6cac0b1ab4cbe63b75ce3d4e8da",
-                "reference": "3144ae21711fb6cac0b1ab4cbe63b75ce3d4e8da",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/3b402f65a4cc90abf6e1104e388b896ce209631b",
+                "reference": "3b402f65a4cc90abf6e1104e388b896ce209631b",
                 "shasum": ""
             },
             "require": {
@@ -1444,20 +1490,20 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2015-09-15 10:49:45"
+            "time": "2016-11-15 14:06:22"
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.6.2",
+            "version": "5.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "cd13b23ac5a519a4708e00736c26ee0bb28b2e01"
+                "reference": "4ddb822f1de421b4cadb47570a525fd7d9359493"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/cd13b23ac5a519a4708e00736c26ee0bb28b2e01",
-                "reference": "cd13b23ac5a519a4708e00736c26ee0bb28b2e01",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/4ddb822f1de421b4cadb47570a525fd7d9359493",
+                "reference": "4ddb822f1de421b4cadb47570a525fd7d9359493",
                 "shasum": ""
             },
             "require": {
@@ -1485,7 +1531,9 @@
                 "symfony/yaml": "~2.1|~3.0"
             },
             "conflict": {
-                "phpdocumentor/reflection-docblock": "3.0.2"
+                "phpdocumentor/reflection-docblock": "3.0.2",
+                "sebastian/object-enumerator": "1.0.1",
+                "sebastian/recursion-context": "1.0.3 || 1.0.4"
             },
             "require-dev": {
                 "ext-pdo": "*"
@@ -1526,7 +1574,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-10-25 07:40:25"
+            "time": "2016-11-18 09:50:51"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1731,16 +1779,16 @@
         },
         {
             "name": "sebastian/comparator",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "937efb279bd37a375bcadf584dec0726f84dbf22"
+                "reference": "ce2bda23a56456f19e35d98241446b581f648c14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/937efb279bd37a375bcadf584dec0726f84dbf22",
-                "reference": "937efb279bd37a375bcadf584dec0726f84dbf22",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/ce2bda23a56456f19e35d98241446b581f648c14",
+                "reference": "ce2bda23a56456f19e35d98241446b581f648c14",
                 "shasum": ""
             },
             "require": {
@@ -1791,7 +1839,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2015-07-26 15:48:44"
+            "time": "2016-11-17 14:39:37"
         },
         {
             "name": "sebastian/diff",
@@ -2670,16 +2718,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.2.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "dff51f72b0706335131b00a7f49606168c582594"
+                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/dff51f72b0706335131b00a7f49606168c582594",
-                "reference": "dff51f72b0706335131b00a7f49606168c582594",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/e79d363049d1c2128f133a2667e4f4190904f7f4",
+                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4",
                 "shasum": ""
             },
             "require": {
@@ -2691,7 +2739,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2-dev"
+                    "dev-master": "1.3-dev"
                 }
             },
             "autoload": {
@@ -2725,7 +2773,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-05-18 14:26:46"
+            "time": "2016-11-14 01:06:16"
         },
         {
             "name": "symfony/yaml",

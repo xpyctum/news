@@ -19,3 +19,8 @@ settings:
 extensions:
     enabled:
         - Codeception\Extension\RunFailed
+        - Codeception\Extension\Migration
+    config:
+        Codeception\Extension\Migration:
+            appConfig: 'codeception/_config/migration.php'
+            migrationPath: '@src/migrations'

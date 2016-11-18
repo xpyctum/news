@@ -9,4 +9,3 @@ modules:
             configFile: 'codeception/_app/config/web.php'
             part: fixtures
         - Asserts
-        - tests\codeception\Helper\Migration

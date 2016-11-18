@@ -9,7 +9,3 @@ modules:
     enabled:
         - Yii2:
             configFile: 'codeception/_app/config/web.php'
-        - tests\codeception\Helper\Migration
-    config:
-        Yii2:
-            configFile: 'codeception/_config/functional.php'
