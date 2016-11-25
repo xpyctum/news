@@ -72,7 +72,12 @@ class News extends ActiveRecord
         return [
             'timestampBehavior' => [
                 'class' => TimestampBehavior::class,
-            ]
+            ],
+            'sluggableBehavior' => [
+                'class' => SluggableBehavior::class,
+                'attribute' => 'title',
+            ],
+            
         ];
     }
 
