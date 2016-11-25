@@ -7,6 +7,7 @@
 namespace roboapp\news\models;
 
 use roboapp\news\Module;
+use yii\behaviors\SluggableBehavior;
 use yii\behaviors\TimestampBehavior;
 use yii\data\ActiveDataProvider;
 use yii\db\ActiveRecord;
