@@ -40,7 +40,7 @@ class News extends ActiveRecord
     {
         return [
             // Required
-            [['slug', 'title'], 'required'],
+            ['title', 'required'],
             // Unique
             ['slug', 'unique'],
             // String
