@@ -34,7 +34,7 @@ class AdminController extends Controller
             'create' => [
                 'class' => Create::class,
                 'newModel' => News::class,
-                'successMessage' => Module::t('Page is create.'),
+                'successMessage' => Module::t('New is create.'),
                 'redirectTo' => function (News $model) {
                     return Url::to(['edit', 'id' => $model->id]);
                 }
@@ -43,7 +43,7 @@ class AdminController extends Controller
                 'class' => Update::class,
                 'findModel' => [$this, 'findModel'],
                 'view' => 'edit',
-                'successMessage' => Module::t('Page saved.')
+                'successMessage' => Module::t('New saved.')
             ],
             'delete' => [
                 'class' => Delete::class,
